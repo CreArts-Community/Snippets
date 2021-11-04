@@ -7,19 +7,9 @@
   grid-column: 1/5;
 }
 
-#status-picker .mask-1qbNWk {
-  height: 78%; 
-  width: 78%;
-  margin-left: 2px;
-}
-
-#status-picker .item-1tOPte:not(#status-picker-custom-status, #status-picker-switch-account) .status-1fhblQ {
-  display: none;
-}
-
+#status-picker .item-1tOPte:not(#status-picker-custom-status, #status-picker-switch-account) .status-1fhblQ {display: none;}
 #status-picker .description-2L932D {display: none;}
 #status-picker .separator-2I32lJ {display: none;}
-#status-picker .betaTag-2ehOEB {display: none;}
 
 #status-picker .status-1fhblQ {
   margin-left: 8px;
@@ -27,7 +17,30 @@
 
 #status-picker .customEmojiPlaceholder-37iZ_j,
 #status-picker .switchAccountsIcon-355frb {
-  margin-left: 0px;
+  margin-left: 1px;
+}
+
+#status-picker .mask-1qbNWk {
+  height: 78%; 
+  width: 78%;
+  margin-left: 3px;
+}
+
+#status-picker-online,
+#status-picker-idle,
+#status-picker-dnd {
+  margin-right: 20px;
+}
+
+#status-picker-online .statusItem-33LqPf,
+#status-picker-idle .statusItem-33LqPf,
+#status-picker-dnd .statusItem-33LqPf,
+#status-picker-invisible .statusItem-33LqPf {
+  padding: 8px 8px;
+}
+
+#status-picker-custom-status .statusItem-33LqPf {
+  padding: 6px 8px;
 }
 
 #status-picker .customEmojiPlaceholder-37iZ_j {
@@ -41,7 +54,7 @@
 }
 
 #status-picker .colorDefault-2K3EoJ.focused-3afm-j .customEmojiPlaceholder-37iZ_j {
-  background: var(--interactive-normal);
+  background: var(--interactive-active);
 }
 
 #status-picker .switchAccountsIcon-355frb {
@@ -55,11 +68,12 @@
 }
 
 #status-picker .colorDefault-2K3EoJ.focused-3afm-j .switchAccountsIcon-355frb {
-  background: var(--interactive-normal);
+  background: var(--interactive-active);
 }
 
 #status-picker-custom-status,
-#status-picker-switch-account {
+#status-picker-switch-account,
+#status-picker-switch-account--manage-accounts {
   margin-top: 12px !important;
 }
 
@@ -83,15 +97,14 @@
   height: 1px;
 }
 
-#status-picker .item-1tOPte {
-  margin-right: 20px;
-}
-
-#status-picker-online .statusItem-33LqPf,
-#status-picker-idle .statusItem-33LqPf,
-#status-picker-dnd .statusItem-33LqPf,
-#status-picker-invisible .statusItem-33LqPf{
-  padding: 6px 8px;
+#status-picker-switch-account--manage-accounts::after {
+  content: "";
+  background: var(--background-modifier-accent);
+  position: absolute;
+  top: -7px;
+  left: 2px;
+  width: 98%;
+  height: 1px;
 }
 
 #status-picker-dnd::after,
@@ -101,7 +114,7 @@
   background: var(--background-modifier-accent);
   position: absolute;
   top: 6px;
-  left: 49px;
+  left: 50px;
   width: 1px;
   height: 24px;
 }
