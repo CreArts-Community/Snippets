@@ -1,0 +1,14 @@
+/* Order */
+.tabs-3L9Rgq {
+  flex-direction: row-reverse;
+}
+
+/* Full Width */
+.tab-XC_yrg {
+  flex: 1;
+}
+
+/* Spacing */
+[aria-controls="1-tab"] {margin: 0px 10px 0px 0px !important;}
+
+[aria-controls="0-tab"] {margin: 0px 0px 0px 10px !important;}
